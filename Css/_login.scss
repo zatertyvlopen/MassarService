@@ -1,0 +1,303 @@
+// ==================================================
+// Login page
+// ==================================================
+
+.loginContent{
+    background: $white;
+    
+    .main{
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: stretch;
+
+        min-height: 100vh;
+
+        @media screen and (max-width: 800px){
+            display: block;
+        }
+    }
+
+    .rightSide{
+        position: relative;
+        z-index: 1;
+        flex: 1 1 58.5%;
+        min-height: 100vh;
+        @media screen and (max-width: 800px){
+            min-height: rem(1);
+        }
+
+        &:before{
+            content:"";
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: calc(100% + 50vw - 720px);
+            background: linear-gradient(133.64deg, #5C61A3 0%, #105BA6 100%, #09203F 100%);
+
+            [dir=rtl] & {
+                right: 0;
+                left: auto;
+            }
+
+            @media screen and (max-width: 1440px){
+                width: 100%;
+            }
+        }
+
+        &.withPhotos{
+
+            &::after{
+                content:"";
+                position: absolute;
+                z-index: -1;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: calc(100% + 50vw - 720px);
+                background: url(../assets/img/welcome-bg.svg) right top no-repeat;
+                background-size: auto 100%;
+                opacity: 0.65;
+    
+                [dir=rtl] & {
+                    right: 0;
+                    left: auto;
+                    transform: scaleX(-1);
+                }
+    
+                @media screen and (max-width: 1440px){
+                    width: 100%;
+                }
+
+                @media screen and (max-width: 800px){
+                    background-position: right center;
+                    background-size: auto 216%;
+                    opacity: 0.3;
+                }
+            }
+
+            .welcome{
+                &::before{
+                    display: none;
+                }
+            }
+        }
+
+        .welcome{
+            position: relative;
+            z-index: 2;
+            color: $white;
+            padding: rem(84) rem(54);
+            height: 100%;
+            text-shadow: 0 0 3px #5C61A3;
+
+            @media screen and (max-width: 1100px){
+                padding: rem(60) rem(30);
+            }
+
+            @media screen and (max-width: 800px){
+                padding: rem(22) rem(20) 30px;
+                min-height: rem(170);
+            }
+            
+            &::before{
+                content:"";
+                position: absolute;
+                z-index: 1;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                background: url(../assets/img/welcome-bg.svg) center bottom 10% no-repeat;
+
+                [dir=rtl] & {
+                    transform: scaleX(-1);
+                }
+
+                @media screen and (max-width: 1100px){
+                    padding: rem(60) rem(30);
+                }
+                
+                @media screen and (max-height: 900px){
+                    background-size: auto 60%;
+                }
+
+                @media (orientation: portrait) {
+                    background-size: 90% auto;
+                }
+    
+                @media screen and (max-width: 800px){
+                    background-size: auto 116%;
+                    background-position: right 10% top 10px;
+                    opacity: 0.6;
+                }
+            }
+
+
+            .inner{
+                position: relative;
+                z-index: 2;
+            }
+
+            .welcomeTitle{
+                font-size: rem(62);
+                line-height: rem(62);
+                font-weight: 400;
+                margin: 0 0 rem(30);
+                max-width: rem(600);
+
+                @media screen and (max-width: 800px){
+                    font-size: rem(30);
+                    line-height: rem(35);
+                    margin: 0 0 rem(14);
+                }
+            }
+
+            .welcomeDesc{
+                font-size: rem(18);
+                line-height: rem(26);
+                max-width: rem(530);
+
+                @media screen and (max-width: 800px){
+                    font-size: rem(14);
+                    line-height: rem(20);
+                }
+            }
+        }
+    }
+
+    .leftSide{
+        background: $white;
+        flex: 1 1 41.5%;
+        padding: rem(30) 0;
+
+        @media screen and (max-width: 800px){
+            position: relative;
+            z-index: 2;
+            margin: -13px 0 0;
+            padding: rem(18) 0;
+            border-radius: 13px 13px 0 0;
+        }
+
+        .inner{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            max-width: rem(446);
+            padding: 0 rem(20);
+            margin: 0 auto;
+
+            @media screen and (max-width: 800px){
+                max-width: rem(640);
+            }
+        }
+    }
+
+    .ministryLogo{
+        margin: 0 0 rem(30);
+        img{
+            display: block;
+            height: auto;
+            margin: 0 auto;
+            max-width: rem(347);
+            width: 100%;
+
+            @media screen and (max-width: 800px){
+                width: 78%;
+            }
+        }
+    }
+
+    .formLogin{
+
+        @media screen and (max-width: 800px){
+            margin: 0 0 rem(16);
+        }
+
+        .massarLogo{
+            margin: 0 0 rem(30);
+
+            @media screen and (max-width: 800px){
+                margin: 0 0 rem(16);
+            }
+
+            img{
+                display: block;
+                height: auto;
+                margin: 0 auto;
+                max-width: rem(245);
+                width: 90%;
+
+                @media screen and (max-width: 800px){
+                    width: 42%;
+                }
+            }
+        }
+
+        a{
+            font-size: rem(12);
+            line-height: rem(16);
+            color: $gray;
+            @extend .animate;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .navLang{
+        ul{
+            font-size: 0;
+            li{
+                font-size: rem(14);
+                line-height: rem(18);
+                text-transform: uppercase;
+                display: inline-block;
+                vertical-align: middle;
+    
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: rem(6);
+                    width: 1px;
+                    background: #ABB5CE;
+                    margin: 0 rem(8);
+                    
+                    [dir=rtl] & {
+                        margin: rem(4) rem(8) 0;
+                    }
+                }
+
+                &:first-child{
+                    &::before{
+                        display: none;
+                    }
+                }
+    
+                a{
+                    display: inline-block;
+                    vertical-align: middle;
+                    color: #ABB5CE;
+                    @extend .animate;
+
+                    &.current{
+                        font-weight: 700;
+                        color: $secColor;
+                    }
+                    &:not(.current){
+                        &:hover{
+                            color: $secColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

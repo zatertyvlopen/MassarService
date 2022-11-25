@@ -1,0 +1,1270 @@
+@charset "UTF-8";
+.animate, .formLoginStyle label input[type=checkbox] + span:after, .formLoginStyle input[type=text],
+.formLoginStyle input[type=email],
+.formLoginStyle input[type=password],
+.formLoginStyle input[type=tel], .formLoginStyle .submitBtn, .formStyle label input[type=checkbox] ~ span::before, .formStyle label input[type=checkbox] ~ span::after, .formStyle label input[type=radio] ~ span::before, .formStyle label input[type=radio] ~ span::after, .formStyle input[type=text],
+.formStyle input[type=email],
+.formStyle input[type=password],
+.formStyle input[type=tel],
+.formStyle textarea, .popupWrapper .popup .closeBtn::before, .popupWrapper .popup .closeBtn::after, .cBtn.btn-cancel, .loginContent .formLogin a, .loginContent .navLang ul li a {
+  transition: 0.3s all linear; }
+
+.clear:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+@media screen and (min-width: 801px) {
+  .hideDesktop {
+    display: none; } }
+
+@media screen and (max-width: 800px) {
+  .hideMobile {
+    display: none; } }
+
+@keyframes load {
+  from {
+    transform: rotate(0deg) translate(-50%, -50%); }
+  to {
+    transform: rotate(360deg) translate(-50%, -50%); } }
+
+@keyframes toRemove {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    display: none;
+    visibility: hidden; } }
+
+@keyframes show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes arrowright {
+  0% {
+    transform: translateX(0);
+    opacity: 0.8; }
+  100% {
+    transform: translateX(10%);
+    opacity: 1; } }
+
+@keyframes arrowrightRtl {
+  0% {
+    transform: translateX(0) scaleX(-1);
+    opacity: 0.8; }
+  100% {
+    transform: translateX(-10%) scaleX(-1);
+    opacity: 1; } }
+
+@font-face {
+  font-family: 'PingFangSC';
+  src: url("../fonts/PingFangSC.eot?#iefix") format("embedded-opentype"), url("../fonts/PingFangSC.woff") format("woff"), url("../fonts/PingFangSC.ttf") format("truetype"), url("../fonts/PingFangSC.svg#PingFangSC") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NeoSansArabicRegular';
+  src: url("../fonts/NeoSansArabicRegular.eot");
+  src: url("../fonts/NeoSansArabicRegular.eot") format("embedded-opentype"), url("../fonts/NeoSansArabicRegular.woff2") format("woff2"), url("../fonts/NeoSansArabicRegular.woff") format("woff"), url("../fonts/NeoSansArabicRegular.ttf") format("truetype"), url("../fonts/NeoSansArabicRegular.svg#NeoSansArabicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NeoSansArabicBold';
+  src: url("../fonts/NeoSansArabicBold.eot");
+  src: url("../fonts/NeoSansArabicBold.eot") format("embedded-opentype"), url("../fonts/NeoSansArabicBold.woff2") format("woff2"), url("../fonts/NeoSansArabicBold.woff") format("woff"), url("../fonts/NeoSansArabicBold.ttf") format("truetype"), url("../fonts/NeoSansArabicBold.svg#NeoSansArabicBold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "BrushScriptMT";
+  src: url("../fonts/BrushScriptMTItalic.eot");
+  src: url("../fonts/BrushScriptMTItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/BrushScriptMTItalic.woff2") format("woff2"), url("../fonts/BrushScriptMTItalic.woff") format("woff"), url("../fonts/BrushScriptMTItalic.ttf") format("truetype"), url("../fonts/BrushScriptMTItalic.svg#BrushScriptMTItalic") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/*==============================================================================================*/
+/*==============================================================================================*/
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Nunito Italic"), local("Nunito-Italic"), url(https://fonts.gstatic.com/s/nunito/v12/XRXX3I6Li01BKofIMNaORs71cA.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+/* cyrillic */
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Nunito Italic"), local("Nunito-Italic"), url(https://fonts.gstatic.com/s/nunito/v12/XRXX3I6Li01BKofIMNaHRs71cA.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+
+/* vietnamese */
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Nunito Italic"), local("Nunito-Italic"), url(https://fonts.gstatic.com/s/nunito/v12/XRXX3I6Li01BKofIMNaMRs71cA.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Nunito Italic"), local("Nunito-Italic"), url(https://fonts.gstatic.com/s/nunito/v12/XRXX3I6Li01BKofIMNaNRs71cA.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Nunito Italic"), local("Nunito-Italic"), url(https://fonts.gstatic.com/s/nunito/v12/XRXX3I6Li01BKofIMNaDRs4.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Nunito Bold Italic"), local("Nunito-BoldItalic"), url(https://fonts.gstatic.com/s/nunito/v12/XRXQ3I6Li01BKofIMN44Y9vHUT8_DQ.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+/* cyrillic */
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Nunito Bold Italic"), local("Nunito-BoldItalic"), url(https://fonts.gstatic.com/s/nunito/v12/XRXQ3I6Li01BKofIMN44Y9vOUT8_DQ.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+
+/* vietnamese */
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Nunito Bold Italic"), local("Nunito-BoldItalic"), url(https://fonts.gstatic.com/s/nunito/v12/XRXQ3I6Li01BKofIMN44Y9vFUT8_DQ.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Nunito Bold Italic"), local("Nunito-BoldItalic"), url(https://fonts.gstatic.com/s/nunito/v12/XRXQ3I6Li01BKofIMN44Y9vEUT8_DQ.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Nunito Bold Italic"), local("Nunito-BoldItalic"), url(https://fonts.gstatic.com/s/nunito/v12/XRXQ3I6Li01BKofIMN44Y9vKUT8.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Nunito Regular"), local("Nunito-Regular"), url(https://fonts.gstatic.com/s/nunito/v12/XRXV3I6Li01BKofIOOaBXso.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+/* cyrillic */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Nunito Regular"), local("Nunito-Regular"), url(https://fonts.gstatic.com/s/nunito/v12/XRXV3I6Li01BKofIMeaBXso.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+
+/* vietnamese */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Nunito Regular"), local("Nunito-Regular"), url(https://fonts.gstatic.com/s/nunito/v12/XRXV3I6Li01BKofIOuaBXso.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Nunito Regular"), local("Nunito-Regular"), url(https://fonts.gstatic.com/s/nunito/v12/XRXV3I6Li01BKofIO-aBXso.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Nunito Regular"), local("Nunito-Regular"), url(https://fonts.gstatic.com/s/nunito/v12/XRXV3I6Li01BKofINeaB.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Nunito Bold"), local("Nunito-Bold"), url(https://fonts.gstatic.com/s/nunito/v12/XRXW3I6Li01BKofAjsOUbOvISTs.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+/* cyrillic */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Nunito Bold"), local("Nunito-Bold"), url(https://fonts.gstatic.com/s/nunito/v12/XRXW3I6Li01BKofAjsOUZevISTs.woff2) format("woff2");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+
+/* vietnamese */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Nunito Bold"), local("Nunito-Bold"), url(https://fonts.gstatic.com/s/nunito/v12/XRXW3I6Li01BKofAjsOUbuvISTs.woff2) format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Nunito Bold"), local("Nunito-Bold"), url(https://fonts.gstatic.com/s/nunito/v12/XRXW3I6Li01BKofAjsOUb-vISTs.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Nunito Bold"), local("Nunito-Bold"), url(https://fonts.gstatic.com/s/nunito/v12/XRXW3I6Li01BKofAjsOUYevI.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/*==============================================================================================*/
+/*==============================================================================================*/
+/* arabic */
+@font-face {
+  font-family: 'Aref Ruqaa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Aref Ruqaa Regular"), local("ArefRuqaa-Regular"), url(https://fonts.gstatic.com/s/arefruqaa/v8/WwkbxPW1E165rajQKDulIIIoVeo5.woff2) format("woff2");
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; }
+
+/* latin */
+@font-face {
+  font-family: 'Aref Ruqaa';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Aref Ruqaa Regular"), local("ArefRuqaa-Regular"), url(https://fonts.gstatic.com/s/arefruqaa/v8/WwkbxPW1E165rajQKDulIIcoVQ.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* arabic */
+@font-face {
+  font-family: 'Aref Ruqaa';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Aref Ruqaa Bold"), local("ArefRuqaa-Bold"), url(https://fonts.gstatic.com/s/arefruqaa/v8/WwkYxPW1E165rajQKDulKDwNQNAY2e_7.woff2) format("woff2");
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC; }
+
+/* latin */
+@font-face {
+  font-family: 'Aref Ruqaa';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Aref Ruqaa Bold"), local("ArefRuqaa-Bold"), url(https://fonts.gstatic.com/s/arefruqaa/v8/WwkYxPW1E165rajQKDulKDwNQNUY2Q.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+button, input, textarea {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+
+select, textarea,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=search],
+input[type=url],
+input[type=tel] {
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0; }
+
+input[type=submit], button {
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0; }
+
+input, button, a {
+  outline: none; }
+
+a[href^="tel:"] {
+  color: inherit;
+  text-decoration: none; }
+
+body a {
+  color: inherit;
+  text-decoration: none; }
+  body a:hover {
+    color: inherit;
+    text-decoration: none; }
+
+html {
+  font-size: 100px;
+  overflow-x: hidden; }
+  html.noScroll, html.noScroll body {
+    overflow: hidden; }
+  @media screen and (max-width: 1300px) and (min-width: 801px) {
+    html {
+      font-size: calc(((100vw - 800px)/28) + 82px); } }
+  @media screen and (max-width: 800px) and (min-width: 601px) {
+    html {
+      font-size: 100px; } }
+  @media screen and (max-width: 360px) and (min-width: 331px) {
+    html {
+      font-size: calc(((100vw - 330px)/3) + 90px); } }
+  @media screen and (max-width: 330px) {
+    html {
+      font-size: 90px; } }
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 0.16rem;
+  background: #fafafa;
+  color: #13375C;
+  overflow-x: hidden; }
+  [dir=rtl] body {
+    font-family: "NeoSansArabicRegular", sans-serif; }
+
+.switcherContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 0.88rem 0 0.24rem; }
+  @media screen and (max-width: 800px) {
+    .switcherContent {
+      padding: 0.66rem 0 0.16rem; } }
+
+.choiceContainer {
+  flex-grow: 1; }
+  .choiceContainer .choiceInner {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0.5rem 0.3rem 0; }
+    @media screen and (max-width: 800px) {
+      .choiceContainer .choiceInner {
+        padding: 0.38rem 0.16rem 0; } }
+
+.dashboardContent {
+  display: flex;
+  overflow: hidden; }
+  .dashboardContent.kidsNav {
+    background: #ffffff; }
+  @media screen and (max-width: 800px) {
+    .dashboardContent {
+      display: block; } }
+
+.mainContent {
+  flex-grow: 1;
+  padding: 0.26rem 0.32rem;
+  overflow: hidden; }
+  @media screen and (max-width: 800px) {
+    .mainContent {
+      padding: 0.2rem 0.16rem; } }
+  @media screen and (min-width: 801px) {
+    .openCollabSpace .mainContent,
+    .openMenu .mainContent {
+      filter: blur(1px); } }
+
+.formLoginStyle label {
+  position: relative;
+  font-size: 0.12rem;
+  line-height: 0.16rem;
+  color: #9296A1;
+  cursor: pointer; }
+  .formLoginStyle label input[type=checkbox] {
+    position: absolute;
+    opacity: 0; }
+    .formLoginStyle label input[type=checkbox] + span {
+      position: relative;
+      display: inline-block;
+      padding: 0.01rem 0 0 0.24rem; }
+      [dir=rtl] .formLoginStyle label input[type=checkbox] + span {
+        padding: 0.01rem 0.24rem 0 0; }
+      .formLoginStyle label input[type=checkbox] + span::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0.16rem;
+        height: 0.16rem;
+        border: 1px solid #9296A1;
+        border-radius: 0.02rem; }
+        [dir=rtl] .formLoginStyle label input[type=checkbox] + span::before {
+          left: auto;
+          right: 0; }
+      .formLoginStyle label input[type=checkbox] + span:after {
+        content: '';
+        position: absolute;
+        top: 0.04rem;
+        left: 0.04rem;
+        width: 0.1rem;
+        height: 0.1rem;
+        background: #9296A1;
+        opacity: 0; }
+        [dir=rtl] .formLoginStyle label input[type=checkbox] + span:after {
+          left: auto;
+          right: 0.04rem; }
+    .formLoginStyle label input[type=checkbox]:checked + span:after {
+      opacity: 1; }
+
+.formLoginStyle .item {
+  position: relative;
+  margin: 0 0 0.3rem; }
+  @media screen and (max-width: 800px) {
+    .formLoginStyle .item {
+      text-align: center;
+      margin: 0 0 0.16rem; } }
+
+.formLoginStyle input[type=text],
+.formLoginStyle input[type=email],
+.formLoginStyle input[type=password],
+.formLoginStyle input[type=tel] {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.16rem;
+  width: 100%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  color: #6173a2;
+  padding: 0 0.12rem;
+  background: #ffffff;
+  border: 1px solid rgba(97, 115, 162, 0.4);
+  border-radius: 0.04rem; }
+  [dir=rtl] .formLoginStyle input[type=text], [dir=rtl]
+  .formLoginStyle input[type=email], [dir=rtl]
+  .formLoginStyle input[type=password], [dir=rtl]
+  .formLoginStyle input[type=tel] {
+    font-family: "NeoSansArabicRegular", sans-serif; }
+  .formLoginStyle input[type=text]:focus,
+  .formLoginStyle input[type=email]:focus,
+  .formLoginStyle input[type=password]:focus,
+  .formLoginStyle input[type=tel]:focus {
+    box-shadow: 0 0 1px 1px rgba(97, 115, 162, 0.2); }
+  .formLoginStyle input[type=text].error,
+  .formLoginStyle input[type=email].error,
+  .formLoginStyle input[type=password].error,
+  .formLoginStyle input[type=tel].error {
+    box-shadow: 0 0 1px 1px rgba(241, 37, 74, 0.8); }
+
+.formLoginStyle .submitBtn {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.16rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #FF8723 0%, #FFAF28 25%, #FFAF28 50%, #FF8723 100%);
+  background-size: 200% 200%;
+  background-position: left top;
+  border-radius: 0.04rem;
+  padding: 0 0.2rem;
+  border: none;
+  cursor: pointer; }
+  [dir=rtl] .formLoginStyle .submitBtn {
+    font-family: "NeoSansArabicRegular", sans-serif; }
+  .formLoginStyle .submitBtn.submitBtn-large {
+    width: 100%; }
+  .formLoginStyle .submitBtn:hover {
+    background-position: right bottom; }
+
+.formLoginStyle .errorLine {
+  position: absolute;
+  z-index: 3;
+  color: #ffffff;
+  font-size: 0.12rem;
+  line-height: 0.14rem;
+  top: 0;
+  left: 0;
+  padding: 0.04rem 0.06rem;
+  margin: -0.08rem 0 0;
+  background: rgba(241, 37, 74, 0.8);
+  border-radius: 2px;
+  transform: translateY(-100%); }
+  [dir=rtl] .formLoginStyle .errorLine {
+    right: 0;
+    left: auto; }
+  .formLoginStyle .errorLine::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0.08rem;
+    border-left: 0.05rem solid transparent;
+    border-right: 0.05rem solid transparent;
+    border-top: 0.08rem solid rgba(241, 37, 74, 0.8);
+    transform: translateY(100%); }
+    [dir=rtl] .formLoginStyle .errorLine::after {
+      right: 0.08rem;
+      left: auto; }
+
+.formLoginStyle .errorZone {
+  font-size: 0.13rem;
+  color: #ffffff;
+  line-height: 0.16rem;
+  padding: 0.12rem;
+  margin: 0 0 0.3rem; }
+  @media screen and (max-width: 800px) {
+    .formLoginStyle .errorZone {
+      text-align: center;
+      margin: 0 0 0.16rem; } }
+  .formLoginStyle .errorZone.MsgErr {
+    background: rgba(241, 37, 74, 0.8); }
+  .formLoginStyle .errorZone.MsgWar {
+    background: rgba(208, 167, 28, 0.8); }
+  .formLoginStyle .errorZone.MsgValid {
+    background: rgba(80, 210, 194, 0.8); }
+
+.formStyle label {
+  font-size: 0.16rem;
+  line-height: 0.2rem;
+  color: #505F86;
+  font-weight: 400;
+  margin: 0 0 0.06rem;
+  display: inline-block; }
+  .formStyle label input[type=checkbox] {
+    position: absolute;
+    opacity: 0; }
+    .formStyle label input[type=checkbox] ~ span {
+      position: relative;
+      display: inline-block;
+      font-size: 0.14rem;
+      line-height: 0.16rem;
+      padding: 0 0.1rem 0 0.2rem;
+      min-height: 0.14rem;
+      cursor: pointer; }
+      [dir=rtl] .formStyle label input[type=checkbox] ~ span {
+        padding: 0 0.2rem 0 0.1rem; }
+      .formStyle label input[type=checkbox] ~ span::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0.12rem;
+        height: 0.12rem;
+        border: 0.01rem solid #505F86;
+        border-radius: 0.02rem; }
+        [dir=rtl] .formStyle label input[type=checkbox] ~ span::before {
+          left: auto;
+          right: 0; }
+      .formStyle label input[type=checkbox] ~ span::after {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 0.1rem;
+        line-height: 0.16rem;
+        font-weight: 400;
+        color: #ffffff;
+        width: 0.14rem;
+        height: 0.14rem;
+        text-align: center;
+        opacity: 0; }
+        [dir=rtl] .formStyle label input[type=checkbox] ~ span::after {
+          left: auto;
+          right: 0; }
+    .formStyle label input[type=checkbox]:checked ~ span::before {
+      background: #505F86; }
+    .formStyle label input[type=checkbox]:checked ~ span::after {
+      opacity: 1; }
+    .formStyle label input[type=checkbox][disabled] ~ span, .formStyle label input[type=checkbox][readonly] ~ span {
+      color: #c9cbd0;
+      cursor: default; }
+      .formStyle label input[type=checkbox][disabled] ~ span::before, .formStyle label input[type=checkbox][readonly] ~ span::before {
+        border-color: #c9cbd0; }
+      .formStyle label input[type=checkbox][disabled] ~ span::after, .formStyle label input[type=checkbox][readonly] ~ span::after {
+        background-color: #c9cbd0; }
+    .formStyle label input[type=checkbox].error ~ span::before {
+      border-color: rgba(241, 37, 74, 0.8);
+      box-shadow: 0 0 1px 1px rgba(241, 37, 74, 0.8); }
+  .formStyle label input[type=radio] {
+    position: absolute;
+    opacity: 0; }
+    .formStyle label input[type=radio] ~ span {
+      position: relative;
+      display: inline-block;
+      font-size: 0.14rem;
+      line-height: 0.16rem;
+      padding: 0 0.1rem 0 0.2rem;
+      min-height: 0.14rem;
+      cursor: pointer; }
+      [dir=rtl] .formStyle label input[type=radio] ~ span {
+        padding: 0 0.2rem 0 0.1rem; }
+      .formStyle label input[type=radio] ~ span::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0.12rem;
+        height: 0.12rem;
+        border: 0.01rem solid #505F86;
+        border-radius: 50%; }
+        [dir=rtl] .formStyle label input[type=radio] ~ span::before {
+          left: auto;
+          right: 0; }
+      .formStyle label input[type=radio] ~ span::after {
+        content: '';
+        position: absolute;
+        left: 0.03rem;
+        top: 0.03rem;
+        width: 0.08rem;
+        height: 0.08rem;
+        background: #505F86;
+        border-radius: 50%;
+        opacity: 0; }
+        [dir=rtl] .formStyle label input[type=radio] ~ span::after {
+          left: auto;
+          right: 0.03rem; }
+    .formStyle label input[type=radio]:checked ~ span::after {
+      opacity: 1; }
+    .formStyle label input[type=radio][disabled] ~ span, .formStyle label input[type=radio][readonly] ~ span {
+      color: #c9cbd0;
+      cursor: default; }
+      .formStyle label input[type=radio][disabled] ~ span::before, .formStyle label input[type=radio][readonly] ~ span::before {
+        border-color: #c9cbd0; }
+      .formStyle label input[type=radio][disabled] ~ span::after, .formStyle label input[type=radio][readonly] ~ span::after {
+        background-color: #c9cbd0; }
+    .formStyle label input[type=radio].error ~ span::before {
+      border-color: rgba(241, 37, 74, 0.8);
+      box-shadow: 0 0 1px 1px rgba(241, 37, 74, 0.8); }
+
+.formStyle input[type=text],
+.formStyle input[type=email],
+.formStyle input[type=password],
+.formStyle input[type=tel],
+.formStyle textarea {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.16rem;
+  width: 100%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  color: #6173a2;
+  padding: 0 0.12rem;
+  background: #ffffff;
+  border: 1px solid rgba(97, 115, 162, 0.4);
+  border-radius: 0.04rem; }
+  [dir=rtl] .formStyle input[type=text], [dir=rtl]
+  .formStyle input[type=email], [dir=rtl]
+  .formStyle input[type=password], [dir=rtl]
+  .formStyle input[type=tel], [dir=rtl]
+  .formStyle textarea {
+    font-family: "NeoSansArabicRegular", sans-serif; }
+  .formStyle input[type=text]:focus,
+  .formStyle input[type=email]:focus,
+  .formStyle input[type=password]:focus,
+  .formStyle input[type=tel]:focus,
+  .formStyle textarea:focus {
+    box-shadow: 0 0 1px 1px rgba(97, 115, 162, 0.2); }
+  .formStyle input[type=text].error,
+  .formStyle input[type=email].error,
+  .formStyle input[type=password].error,
+  .formStyle input[type=tel].error,
+  .formStyle textarea.error {
+    box-shadow: 0 0 1px 1px rgba(241, 37, 74, 0.8); }
+  .formStyle input[type=text][disabled], .formStyle input[type=text][readonly],
+  .formStyle input[type=email][disabled],
+  .formStyle input[type=email][readonly],
+  .formStyle input[type=password][disabled],
+  .formStyle input[type=password][readonly],
+  .formStyle input[type=tel][disabled],
+  .formStyle input[type=tel][readonly],
+  .formStyle textarea[disabled],
+  .formStyle textarea[readonly] {
+    background-color: #e4e5e8;
+    opacity: 0.5; }
+
+.formStyle input[type=submit] {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.14rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: inline-block;
+  height: 0.32rem;
+  line-height: 0.32rem;
+  letter-spacing: 0.01rem;
+  padding: 0 0.16rem;
+  background: linear-gradient(134.36deg, #5C61A3 0%, #105BA6 50%, #09203F 100%);
+  background-size: 200% 200%;
+  background-position: left top;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 0.04rem;
+  cursor: pointer;
+  transition: 0.3s background-position linear; }
+  [dir=rtl] .formStyle input[type=submit] {
+    font-family: "NeoSansArabicRegular", sans-serif;
+    font-weight: 400; }
+  .formStyle input[type=submit]:hover {
+    background-position: right bottom; }
+  .formStyle input[type=submit][disabled] {
+    cursor: default;
+    background: #9296A1;
+    opacity: 0.5; }
+
+.formStyle input[type=file][disabled] {
+  opacity: 0.5; }
+
+.formStyle input[type=file].error {
+  color: rgba(241, 37, 74, 0.8); }
+
+.formStyle select {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.16rem;
+  width: 100%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  color: #6173a2;
+  padding: 0 0.12rem;
+  background: #ffffff;
+  border: 1px solid rgba(97, 115, 162, 0.4);
+  border-radius: 0.04rem;
+  appearance: none; }
+  .formStyle select[multiple] {
+    height: auto; }
+  .formStyle select::-ms-expand {
+    display: none; }
+  .formStyle select.error {
+    box-shadow: 0 0 1px 1px rgba(241, 37, 74, 0.8); }
+  .formStyle select[disabled], .formStyle select[readonly] {
+    background-color: #e4e5e8;
+    opacity: 0.5; }
+
+.formStyle .selectbox {
+  position: relative;
+  background: #ffffff;
+  border-radius: 0.04rem; }
+  .formStyle .selectbox::after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    right: 0.16rem;
+    top: 50%;
+    width: 0.06rem;
+    height: 0.06rem;
+    border: 1px solid rgba(97, 115, 162, 0.6);
+    border-top: none;
+    border-left: none;
+    transform: translateY(-50%) rotate(45deg); }
+    [dir=rtl] .formStyle .selectbox::after {
+      right: auto;
+      left: 0.16rem; }
+  .formStyle .selectbox select {
+    position: relative;
+    z-index: 2;
+    background: none; }
+    .formStyle .selectbox select[disabled], .formStyle .selectbox select[readonly] {
+      background-color: #e4e5e8;
+      opacity: 0.5; }
+
+.formStyle textarea {
+  height: 2rem;
+  resize: none; }
+
+.formStyle .formRow {
+  display: flex;
+  justify-content: space-between; }
+  @media screen and (max-width: 800px) {
+    .formStyle .formRow {
+      display: block; } }
+  .formStyle .formRow .formCol-half {
+    flex-basis: calc(50% - 0.12rem);
+    min-width: calc(50% - 0.12rem);
+    margin: 0 0 0.2rem; }
+  .formStyle .formRow .formCol-1 {
+    flex-basis: calc((100% / 3) - 0.16rem);
+    min-width: calc((100% / 3) - 0.16rem);
+    margin: 0 0 0.2rem; }
+  .formStyle .formRow .formCol-2 {
+    flex-basis: calc((100% * 2 / 3) - 0.08rem);
+    min-width: calc((100% * 2 / 3) - 0.08rem);
+    margin: 0 0 0.2rem; }
+
+.formStyle .formItem {
+  position: relative;
+  margin: 0 0 0.2rem; }
+  .formStyle .formItem:last-child {
+    margin: 0; }
+  .formStyle .formItem.center {
+    text-align: center; }
+  .formStyle .formItem.right {
+    text-align: right; }
+  .formStyle .formItem.left {
+    text-align: left; }
+  .formStyle .formItem .field {
+    position: relative; }
+  .formStyle .formItem.multiBtn {
+    display: flex;
+    justify-content: space-between; }
+  .formStyle .formItem.sep {
+    padding-top: 0.2rem;
+    border-top: 1px solid #ebeef4; }
+
+.formStyle .helpText {
+  font-size: 0.12rem;
+  line-height: 0.16rem;
+  color: #9296A1;
+  margin: 0.02rem 0; }
+
+.formStyle .errorLine {
+  position: absolute;
+  z-index: 3;
+  color: #ffffff;
+  font-size: 0.12rem;
+  line-height: 0.14rem;
+  top: 0;
+  left: 0;
+  padding: 0.04rem 0.06rem;
+  margin: -0.08rem 0 0;
+  background: rgba(241, 37, 74, 0.8);
+  border-radius: 2px;
+  transform: translateY(-100%); }
+  [dir=rtl] .formStyle .errorLine {
+    right: 0;
+    left: auto; }
+  .formStyle .errorLine::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0.08rem;
+    border-left: 0.05rem solid transparent;
+    border-right: 0.05rem solid transparent;
+    border-top: 0.08rem solid rgba(241, 37, 74, 0.8);
+    transform: translateY(100%); }
+    [dir=rtl] .formStyle .errorLine::after {
+      right: 0.08rem;
+      left: auto; }
+
+.formStyle .errorInLine {
+  font-size: 0.12rem;
+  line-height: 0.14rem;
+  color: #F1254A;
+  display: block;
+  margin: 0.02rem 0; }
+
+.formStyle .errorZone {
+  font-size: 0.13rem;
+  color: #ffffff;
+  line-height: 0.16rem;
+  padding: 0.12rem;
+  margin: 0 0 0.3rem; }
+  @media screen and (max-width: 800px) {
+    .formStyle .errorZone {
+      text-align: center;
+      margin: 0 0 0.16rem; } }
+  .formStyle .errorZone.MsgErr {
+    background: rgba(241, 37, 74, 0.8); }
+  .formStyle .errorZone.MsgWar {
+    background: rgba(208, 167, 28, 0.8); }
+  .formStyle .errorZone.MsgValid {
+    background: rgba(80, 210, 194, 0.8); }
+
+.popupWrapper .popup {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100%;
+  padding: 0.2rem 0;
+  align-items: center;
+  justify-content: center; }
+  .popupWrapper .popup.open {
+    display: flex;
+    animation: show 0.3s forwards; }
+  .popupWrapper .popup .overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); }
+  .popupWrapper .popup .innerPopup {
+    position: relative;
+    background: #ffffff;
+    border-radius: 0.08rem;
+    max-width: 5rem;
+    width: 80%;
+    overflow: hidden; }
+  .popupWrapper .popup .closeBtn {
+    position: absolute;
+    top: 0.16rem;
+    right: 0.08rem;
+    width: 0.16rem;
+    height: 0.16rem;
+    text-indent: -99999px; }
+    [dir=rtl] .popupWrapper .popup .closeBtn {
+      right: auto;
+      left: 0.08rem; }
+    .popupWrapper .popup .closeBtn::before, .popupWrapper .popup .closeBtn::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background: #86939E;
+      transform: rotate(45deg); }
+    .popupWrapper .popup .closeBtn::after {
+      transform: rotate(-45deg); }
+    .popupWrapper .popup .closeBtn:hover::before, .popupWrapper .popup .closeBtn:hover::after {
+      background: #13375C; }
+  .popupWrapper .popup .titlePop {
+    padding: 0.16rem;
+    background-color: #ebeef4; }
+  .popupWrapper .popup .contPop {
+    padding: 0.16rem; }
+
+.cBtn {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.14rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: inline-block;
+  height: 0.32rem;
+  line-height: 0.32rem;
+  letter-spacing: 0.01rem;
+  padding: 0 0.16rem;
+  background: linear-gradient(134.36deg, #5C61A3 0%, #105BA6 50%, #09203F 100%);
+  background-size: 200% 200%;
+  background-position: left top;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 0.04rem;
+  cursor: pointer;
+  transition: 0.3s background-position linear; }
+  [dir=rtl] .cBtn {
+    font-family: "NeoSansArabicRegular", sans-serif;
+    font-weight: 400; }
+  .cBtn:hover {
+    background-position: right bottom;
+    color: #ffffff; }
+  .cBtn.btn-search {
+    display: flex;
+    align-items: center; }
+    .cBtn.btn-search::before {
+      content: '';
+      width: 0.14rem;
+      height: 0.14rem;
+      background: url(../assets/img/welcome-bg.svg) center center no-repeat;
+      background-size: 100% auto;
+      margin-right: 0.08rem; }
+      [dir=rtl] .cBtn.btn-search::before {
+        margin: 0 0 0 0.08rem; }
+  .cBtn.btn-add {
+    display: flex;
+    align-items: center; }
+    .cBtn.btn-add::before {
+      content: '';
+      width: 0.14rem;
+      height: 0.14rem;
+      background: url(../assets/img/welcome-bg.svg) center center no-repeat;
+      background-size: 100% auto;
+      margin-right: 0.08rem; }
+      [dir=rtl] .cBtn.btn-add::before {
+        margin: 0 0 0 0.08rem; }
+  .cBtn.btn-cancel {
+    color: #505F86;
+    background: #e4e5e8;
+    border: 1px solid #9296A1; }
+    .cBtn.btn-cancel:hover {
+      background: #c9cbd0; }
+    .cBtn.btn-cancel[disabled] {
+      opacity: 0.2;
+      color: #ffffff; }
+  .cBtn[disabled] {
+    cursor: default;
+    background: #9296A1;
+    opacity: 0.5; }
+
+.loginContent {
+  background: #ffffff; }
+  .loginContent .main {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    min-height: 100vh; }
+    @media screen and (max-width: 800px) {
+      .loginContent .main {
+        display: block; } }
+  .loginContent .rightSide {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 58.5%;
+    min-height: 100vh; }
+    @media screen and (max-width: 800px) {
+      .loginContent .rightSide {
+        min-height: 0.01rem; } }
+    .loginContent .rightSide:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: calc(100% + 50vw - 720px);
+      background: linear-gradient(133.64deg, #5C61A3 0%, #105BA6 100%, #09203F 100%); }
+      [dir=rtl] .loginContent .rightSide:before {
+        right: 0;
+        left: auto; }
+      @media screen and (max-width: 1440px) {
+        .loginContent .rightSide:before {
+          width: 100%; } }
+    .loginContent .rightSide.withPhotos::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: calc(100% + 50vw - 720px);
+      background: url(../img/photos-bg.png) right top no-repeat;
+      background-size: auto 100%;
+      opacity: 0.65; }
+      [dir=rtl] .loginContent .rightSide.withPhotos::after {
+        right: 0;
+        left: auto;
+        transform: scaleX(-1); }
+      @media screen and (max-width: 1440px) {
+        .loginContent .rightSide.withPhotos::after {
+          width: 100%; } }
+      @media screen and (max-width: 800px) {
+        .loginContent .rightSide.withPhotos::after {
+          background-position: right center;
+          background-size: auto 216%;
+          opacity: 0.3; } }
+    .loginContent .rightSide.withPhotos .welcome::before {
+      display: none; }
+    .loginContent .rightSide .welcome {
+      position: relative;
+      z-index: 2;
+      color: #ffffff;
+      padding: 0.84rem 0.54rem;
+      height: 100%;
+      text-shadow: 0 0 3px #5C61A3; }
+      @media screen and (max-width: 1100px) {
+        .loginContent .rightSide .welcome {
+          padding: 0.6rem 0.3rem; } }
+      @media screen and (max-width: 800px) {
+        .loginContent .rightSide .welcome {
+          padding: 0.22rem 0.2rem 30px;
+          min-height: 1.7rem; } }
+      .loginContent .rightSide .welcome::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: url(../img/welcome-bg.svg) center bottom 10% no-repeat; }
+        [dir=rtl] .loginContent .rightSide .welcome::before {
+          transform: scaleX(-1); }
+        @media screen and (max-width: 1100px) {
+          .loginContent .rightSide .welcome::before {
+            padding: 0.6rem 0.3rem; } }
+        @media screen and (max-height: 900px) {
+          .loginContent .rightSide .welcome::before {
+            background-size: auto 60%; } }
+        @media (orientation: portrait) {
+          .loginContent .rightSide .welcome::before {
+            background-size: 90% auto; } }
+        @media screen and (max-width: 800px) {
+          .loginContent .rightSide .welcome::before {
+            background-size: auto 116%;
+            background-position: right 10% top 10px;
+            opacity: 0.6; } }
+      .loginContent .rightSide .welcome .inner {
+        position: relative;
+        z-index: 2; }
+      .loginContent .rightSide .welcome .welcomeTitle {
+        font-size: 0.62rem;
+        line-height: 0.62rem;
+        font-weight: 400;
+        margin: 0 0 0.3rem;
+        max-width: 6rem; }
+        @media screen and (max-width: 800px) {
+          .loginContent .rightSide .welcome .welcomeTitle {
+            font-size: 0.3rem;
+            line-height: 0.35rem;
+            margin: 0 0 0.14rem; } }
+      .loginContent .rightSide .welcome .welcomeDesc {
+        font-size: 0.18rem;
+        line-height: 0.26rem;
+        max-width: 5.3rem; }
+        @media screen and (max-width: 800px) {
+          .loginContent .rightSide .welcome .welcomeDesc {
+            font-size: 0.14rem;
+            line-height: 0.2rem; } }
+  .loginContent .leftSide {
+    background: #ffffff;
+    flex: 1 1 41.5%;
+    padding: 0.3rem 0; }
+    @media screen and (max-width: 800px) {
+      .loginContent .leftSide {
+        position: relative;
+        z-index: 2;
+        margin: -13px 0 0;
+        padding: 0.18rem 0;
+        border-radius: 13px 13px 0 0; } }
+    .loginContent .leftSide .inner {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 4.46rem;
+      padding: 0 0.2rem;
+      margin: 0 auto; }
+      @media screen and (max-width: 800px) {
+        .loginContent .leftSide .inner {
+          max-width: 6.4rem; } }
+  .loginContent .ministryLogo {
+    margin: 0 0 0.3rem; }
+    .loginContent .ministryLogo img {
+      display: block;
+      height: auto;
+      margin: 0 auto;
+      max-width: 3.47rem;
+      width: 100%; }
+      @media screen and (max-width: 800px) {
+        .loginContent .ministryLogo img {
+          width: 78%; } }
+  @media screen and (max-width: 800px) {
+    .loginContent .formLogin {
+      margin: 0 0 0.16rem; } }
+  .loginContent .formLogin .massarLogo {
+    margin: 0 0 0.3rem; }
+    @media screen and (max-width: 800px) {
+      .loginContent .formLogin .massarLogo {
+        margin: 0 0 0.16rem; } }
+    .loginContent .formLogin .massarLogo img {
+      display: block;
+      height: auto;
+      margin: 0 auto;
+      max-width: 2.45rem;
+      width: 90%; }
+      @media screen and (max-width: 800px) {
+        .loginContent .formLogin .massarLogo img {
+          width: 42%; } }
+  .loginContent .formLogin a {
+    font-size: 0.12rem;
+    line-height: 0.16rem;
+    color: #9296A1; }
+    .loginContent .formLogin a:hover {
+      text-decoration: underline; }
+  .loginContent .navLang ul {
+    font-size: 0; }
+    .loginContent .navLang ul li {
+      font-size: 0.14rem;
+      line-height: 0.18rem;
+      text-transform: uppercase;
+      display: inline-block;
+      vertical-align: middle; }
+      .loginContent .navLang ul li::before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 0.06rem;
+        width: 1px;
+        background: #ABB5CE;
+        margin: 0 0.08rem; }
+        [dir=rtl] .loginContent .navLang ul li::before {
+          margin: 0.04rem 0.08rem 0; }
+      .loginContent .navLang ul li:first-child::before {
+        display: none; }
+      .loginContent .navLang ul li a {
+        display: inline-block;
+        vertical-align: middle;
+        color: #ABB5CE; }
+        .loginContent .navLang ul li a.current {
+          font-weight: 700;
+          color: #505F86; }
+        .loginContent .navLang ul li a:not(.current):hover {
+          color: #505F86; }
